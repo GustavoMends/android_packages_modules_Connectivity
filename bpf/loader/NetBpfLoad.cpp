@@ -1577,8 +1577,7 @@ static int doLoad(char** argv, char * const envp[]) {
 
     // 26Q4 bumps the kernel requirement up to 5.15
     if (isAtLeast26Q4 && !isAtLeastKernelVersion(5, 15)) {
-        ALOGE("Android 26Q4 requires kernel 5.15.");
-        return 7;
+        ALOGW("Android 26Q4 requires kernel 5.15.");
     }
 
     // Technically already required by U, but only enforce on V+
